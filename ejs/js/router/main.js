@@ -1,12 +1,4 @@
-module.exports = function(app,fs) {      
-    /*app.get('/', function(req, res) {
-        res.render('index.html');
-    });
-    app.get('/about', function(req,res){
-        res.render('about.html');
-    });
-    */
-
+const router = (app) => {
     app.get('/', function(req, res) {
         res.render('index', {
             title: "My HOMEPAGE",
@@ -14,3 +6,5 @@ module.exports = function(app,fs) {
         })
     });
 }
+
+export default router;

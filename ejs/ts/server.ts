@@ -1,16 +1,15 @@
-import { Application, json, urlencoded } from "express";
-const session = require('express-session')
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const compression = require('compression');
+import express, { Application, json, RequestHandler, urlencoded } from "express";
+import session from 'express-session';
+import cookieParser from 'cookie-parser';
+import compression from 'compression';
 import {main as mainRouter} from './router/main'
 
 
 const app:Application = express();
 app.use(compression());
 app.use(cookieParser());
-app.use(json());
-app.use(urlencoded({ extended: false }));
+app.use(json() as RequestHandler);
+app.use(urlencoded({ extended: false }) as RequestHandler);
 app.use(session({
     secret: "@#@MYSIGN#@&#&",
     resave: false,

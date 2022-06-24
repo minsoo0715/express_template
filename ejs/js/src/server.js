@@ -2,7 +2,7 @@ import express, {json, urlencoded} from 'express';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
-import {main as mainRouter} from './router/main.js'
+import {main as useRouter} from './router/main.js'
 import ejs from 'ejs';
 
 const app = express();
@@ -16,13 +16,13 @@ app.use(session({
     saveUninitialized: true
 }))
 
-mainRouter(app);
+useRouter(app);
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.engine('html', ejs.renderFile);
 app.use(express.static('public'));
 
-app.listen(4000, function(){
+app.listen(8000, function(){
     console.log("Express Server has started on port 4000");
 });
 

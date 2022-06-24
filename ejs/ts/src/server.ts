@@ -9,7 +9,6 @@ import cookieParser from "cookie-parser";
 import compression from "compression";
 import { main as mainRouter } from "./router/main";
 
-
 const app: Application = express();
 app.use(compression());
 app.use(cookieParser());

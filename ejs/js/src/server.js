@@ -4,6 +4,9 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import {main as useRouter} from './router/main.js'
 import ejs from 'ejs';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 app.use(compression());
@@ -17,12 +20,12 @@ app.use(session({
 }))
 
 useRouter(app);
-app.set('views', './views');
+app.set('views', `${__dirname}/views`);
 app.set('view engine', 'ejs');
 app.engine('html', ejs.renderFile);
-app.use(express.static('public'));
+app.use(express.static(`${__dirname}/public`));
 
 app.listen(8000, function(){
-    console.log("Express Server has started on port 4000");
+    console.log("Express Server has started on port 8000");
 });
 

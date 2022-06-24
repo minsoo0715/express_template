@@ -1,0 +1,15 @@
+{
+  "name": "express-tutorial",
+  "version": "1.0.0",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "express": "~4.17.1",
+    "nodemon": "^2.0.18"
+  },
+  "scripts": {
+    "start": "nodemon --watch './src' -e 'js,ejs,css' ./src/server.js"
+  },
+  "main": "server.js",
+  "type": "module"
+}

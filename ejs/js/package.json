@@ -13,8 +13,5 @@
     "start": "nodemon --watch './src' -e 'js,ejs,css' ./src/server.js"
   },
   "main": "server.js",
-  "type": "module",
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "type": "module"
 }

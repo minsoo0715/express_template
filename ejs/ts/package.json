@@ -19,9 +19,6 @@
     "start": "nodemon --watch './src' -e 'ts-node,ejs,css' ./src/server.ts"
   },
   "main": "server.js",
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/compression": "^1.7.2",
     "@types/cookie-parser": "^1.4.3",

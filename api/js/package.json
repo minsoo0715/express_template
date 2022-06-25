@@ -1,5 +1,5 @@
 {
-  "name": "express-tutorial",
+  "name": "express-ejs--template-js",
   "version": "1.0.0",
   "dependencies": {
     "compression": "^1.7.4",
